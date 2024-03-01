@@ -178,7 +178,7 @@ pub fn update_joystick(
 }
 
 pub fn update_joystick_by_mouse(
-    mouse_button_input: Res<Input<MouseButton>>,
+    mouse_button_input: Res<ButtonInput<MouseButton>>,
     mut mousebtn_evr: EventReader<MouseButtonInput>,
     mut send_values: EventWriter<InputEvent>,
     windows: Query<&Window, With<PrimaryWindow>>,
