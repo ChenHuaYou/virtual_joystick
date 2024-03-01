@@ -69,7 +69,7 @@ impl<S: VirtualJoystickID> Plugin for VirtualJoystickPlugin<S> {
 }
 
 fn joystick_image_node_system<S: VirtualJoystickID>(
-    interaction_area: Query<(&Node, With<VirtualJoystickInteractionArea>)>,
+    interaction_area: Query<(&Node, Hash<VirtualJoystickInteractionArea>)>,
     mut joystick: Query<(
         &Transform,
         &VirtualJoystickNode<S>,
